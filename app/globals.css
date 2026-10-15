@@ -28,6 +28,20 @@ body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; transition-duration:.01ms!important; } }
 @media (max-width:380px) { .hero h1 { font-size:3.8rem; }.primary-button { font-size:9px; }.story-section h2 { font-size:3.2rem; }.project-copy h3 { font-size:2.6rem; } }
 body { overflow-x:hidden; }
+/* Keep social actions readable: brand marks sit above their destination labels. */
+.socials { align-items:flex-start; gap:1rem; }
+.socials a { display:flex; flex-direction:column; align-items:center; justify-content:flex-start; width:4.2rem; height:auto; min-height:4.2rem; gap:.55rem; padding:.2rem 0; border:0; border-radius:.75rem; color:rgba(255,255,255,.58); font:10px 'DM Mono',monospace; text-transform:uppercase; letter-spacing:.08em; transition:color .2s, transform .2s, filter .2s; }
+.socials a:hover { color:#fff; transform:translateY(-3px); filter:drop-shadow(0 0 10px rgba(103,232,249,.45)); }
+.social-brand-logo { display:block; flex:0 0 auto; width:1.75rem; height:1.75rem; color:rgba(255,255,255,.88); }
+.linkedin-logo { color:#0a9bd8; filter:drop-shadow(0 0 8px rgba(10,155,216,.25)); }
+.github-logo { color:#f4f4f5; filter:drop-shadow(0 0 8px rgba(244,244,245,.2)); }
+.socials a:nth-child(3) .social-brand-logo { color:#f0abfc; }
+.socials a:nth-child(4) .social-brand-logo { color:#67e8f9; }
+.socials-compact { align-items:center; gap:.6rem; }
+.socials-compact a { width:2.2rem; min-height:0; gap:0; padding:0; }
+.socials-compact a span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.socials-compact .social-brand-logo { width:1.2rem; height:1.2rem; }
+@media (max-width:768px) { .hero-actions .socials { width:100%; justify-content:flex-start; gap:.55rem; }.hero-actions .socials a { width:4rem; } }
 .currently { position:relative; z-index:2; display:grid; grid-template-columns:repeat(3,1fr); gap:1px; max-width:1152px; margin:-3rem auto 0; padding:0 1.5rem; background:rgba(255,255,255,.12); }
 .currently-card { min-height:170px; padding:1.5rem; background:rgba(10,10,26,.9); backdrop-filter:blur(18px); transition:transform .3s,background .3s; }
 .currently-card:hover { transform:translateY(-6px); background:rgba(18,18,43,.96); }
