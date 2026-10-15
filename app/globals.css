@@ -52,6 +52,10 @@ body { overflow-x:hidden; }
 .light-theme .hero,
 .light-theme .story-section,
 .light-theme .contact { color:#111827; }
+.light-theme .glass-panel { color:#111827; }
+.light-theme .glass-panel .eyebrow { color:#0e7490; }
+.light-theme .glass-panel .stats b { color:#111827; }
+.light-theme .glass-panel .stats span { color:rgba(15,23,42,.62); }
 .light-theme .hero::after { background:radial-gradient(circle at 18% 24%,rgba(34,211,238,.14),transparent 30%),radial-gradient(circle at 82% 12%,rgba(124,58,237,.13),transparent 34%); }
 .light-theme .hero-scene { opacity:.3; mix-blend-mode:multiply; }
 .light-theme .availability,
